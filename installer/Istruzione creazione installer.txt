@@ -1,0 +1,8 @@
+Passaggi:
+
+- Cancellare le cartelle 'build' e 'dist' se presenti
+- Buildare il progetto python tramite il comando 'pyinstaller transcriber.spec'. Il processo genererà due cartelle, build e dist
+- Entrare in dist -> Trascrittore Audio-Testo -> _internal e tirare fuori la cartella model_dir
+- Spostare _internal, model_dir e il .exe dell'app dentro la cartella Installer (dove c'è il file .iss)
+- Aprire il file .iss e compilare con Inno Setup
+- Finita la compilazione, zippare i file TranscriberInstaller.exe e i .bin generati insieme al README.txt
